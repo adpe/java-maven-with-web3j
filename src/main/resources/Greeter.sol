@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.5.7;
+pragma solidity ^0.7.1;
 
 contract Greeter {
 
     string greeting;
 
-    constructor() public {
+    constructor() {
         greeting = "Hello World";
     }
 
