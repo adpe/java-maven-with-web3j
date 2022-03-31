@@ -11,10 +11,11 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class Web3jReading {
+    static final String WEB3_PROVIDER = "http://localhost:7545";
 
     public static void main(String[] args) throws IOException {
 
-        var web3 = Web3j.build(new HttpService("http://localhost:7545"));
+        var web3 = Web3j.build(new HttpService(WEB3_PROVIDER));
 
         var version = web3.web3ClientVersion().send();
         System.out.println("Blockchain: " + version.getWeb3ClientVersion());

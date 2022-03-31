@@ -25,4 +25,17 @@
             <version>1.2.11</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.web3j</groupId>
+                <artifactId>web3j-maven-plugin</artifactId>
+                <version>4.8.7</version>
+                <configuration>
+                    <soliditySourceFiles/>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

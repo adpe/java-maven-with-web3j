@@ -12,11 +12,13 @@ import java.io.File;
 import java.io.IOException;
 import java.math.BigDecimal;
 
+import static me.adrianperez.Greeter.Web3jReading.WEB3_PROVIDER;
+
 public class Web3jWallets {
 
     public static void main(String[] args) throws Exception {
 
-        var web3 = Web3j.build(new HttpService("http://localhost:7545"));
+        var web3 = Web3j.build(new HttpService(WEB3_PROVIDER));
 
         /* Create new local stored wallet. */
         var password = "secret";
@@ -54,7 +56,7 @@ public class Web3jWallets {
         System.out.println("The balance of receipt wallet is: " + Convert.fromWei(String.valueOf(balance.getBalance()), Convert.Unit.ETHER));
     }
 
-    private static void printCredentials(Credentials credentials, String credentialsType) {
+    static void printCredentials(Credentials credentials, String credentialsType) {
         /* Base64 hexadecimal */
         var numeralSystem = 16;
         var keyPair = credentials.getEcKeyPair();
